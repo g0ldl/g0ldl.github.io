@@ -61,8 +61,6 @@ section {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
-
 img.animated-gif{
   width: 400px;
   height: 400px;
@@ -105,12 +103,20 @@ p2 {
 
 h3 {
   color: white;
-  text-align: left;
-  position: relative;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* project list */
+ #project {
+  color: white;
+  font-size: 3rem;
+  letter-spacing: 5px;
+  line-height: 6rem;
 }
 
 h4 {
-  color: black;
+  color: red;
 }
 
 section:nth-of-type(odd) {
