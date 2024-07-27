@@ -42,6 +42,8 @@ main {
   transform: rotate(-90deg) translateX(-100vh);
   overflow-x: hidden;
   overflow-y: scroll;
+  /* filter: contrast(30); ----------------------asdsdas*/
+
 }
 
 @keyframes infiniteScroll {
@@ -98,6 +100,7 @@ img.animated-gif{
 h1 {
   float: left;
   color: white;
+  font-size: 9rem;
 }
 
 h2 {
@@ -191,7 +194,7 @@ h3 {
 }
 
 h4 {
-  color: red;
+  color: yellow;
 }
 
 section:nth-of-type(odd) {
@@ -202,4 +205,66 @@ section:nth-of-type(even) {
   background: white;
 }
 
+/*  loader temp ------------------------------*/
+
+
+
+.circle {
+  display: inline-block;
+  height: 4rem;
+  aspect-ratio: 1;
+  
+  background: white;
+
+  border-radius: 50%;
+  filter: blur(15px);  
+  
+}
+
+.circle:nth-child(1) {
+  animation: move-left 3s ease-in-out infinite;
+  transform: translatex(100%);
+
+  @keyframes move-left {
+    
+    50% {
+      transform: translatex(-200px)
+    }
+    100% {
+      rotate: 1turn;
+    }
+    
+  }
+  
+}
+.circle:nth-child(2) {
+  animation: move-right 3s ease-in-out infinite;
+  transform: translatex(-100%);
+
+  @keyframes move-right {
+    
+    50% {
+      transform: translatex(200px)
+    }
+    100% {
+      rotate: 1turn;
+    }
+  }
+}
+
+
+.bg {
+
+  display: flex;
+
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+  width: 100vw;
+    
+  background: black;
+  filter: contrast(30);
+}
 
