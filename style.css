@@ -13,6 +13,7 @@ ul {
   height: 2rem;
   position: absolute;
   z-index: 100;
+  border-radius: 5px;
 }
 
 li {
@@ -75,9 +76,10 @@ h1 {
 h2 {
   font-family: Georgia, serif;
   text-align: center;
-  font-size: 5rem;
+  font-size: 9rem;
   letter-spacing: 6px;
   color: black;
+  font-weight: 100;
 }
 
 .vl {
@@ -95,10 +97,17 @@ p1 {
   padding: 15px;
   font-size: 1.4rem;
   color: black;
+  font-weight: 550;
 }
 
 p2 {
   color: white;
+}
+
+.section-three {
+  display: flex;
+  flex-direction: column;
+  color: blue;
 }
 
 h3 {
@@ -107,12 +116,20 @@ h3 {
   justify-content: flex-start;
 }
 
-/* project list */
- #project {
+#pj {
   color: white;
   font-size: 3rem;
   letter-spacing: 5px;
-  line-height: 6rem;
+  line-height: 1.6;
+
+}
+
+#pj:hover {
+  color: #2D2D2D;
+}
+
+#pj:visited {
+  color: grey;
 }
 
 h4 {
