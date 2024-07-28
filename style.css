@@ -9,32 +9,7 @@
   ::-webkit-scrollbar {
     display: none;
   }
-
-  ul {
-    padding: 15px;
-    background-color: white;
-    height: 2rem;
-    position: absolute;
-    z-index: 100;
-    border-radius: 5px;
-    z-index: 5;
-  }
-
-  li {
-    margin: 10px;
-    display: inline-block;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-  }
-
-  li a {
-    text-decoration: none; 
-    color: black;
-  }
-
-  li a:hover {
-    color: rgb(128, 128, 128);
-  }
+  
 
   main {
     position: fixed;
@@ -57,6 +32,7 @@
     overflow-x: hidden;
     z-index: 99;
   }
+  
   .horizontal-scrolling-items {
     display: flex;
     font-size: 40px;
@@ -90,17 +66,13 @@
     font-size: 10rem;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: termina, sans-serif;
   }
 
   img.animated-gif{
     width: 300px;
     height: 400px;
     padding: 40px;
-  }
-
-  #scrolling {
-    color: red;
   }
 
   h1 {
@@ -111,28 +83,27 @@
 
   .welcome::after {
     content:"WELCOME";
-    animation: changeText 4s 1s infinite;
+    animation: changeText 3s 2s infinite; /* time between each words - time for first word to start*/
   }
   
   @keyframes changeText {
     0% {
-      content:"สวัสดี";
+      content:"WELCOME"
     }
-    20% {
+    30% {
       content:"你好";
     }
     40% {
-      content:"こんにちは";
+      content:"สวัสดี";
     }
     60% {
-      content:"안녕하세요";
+      content:"こんにちは";
     }
     80% {
-      content:"Xin chào";
+      content:"안녕하세요";
     }
-
     100% {
-      content:"Aloha"
+      content:"Xin chào";
     }
   }
 
@@ -145,6 +116,7 @@
     font-weight: 900;
     text-decoration: underline 8px;
     text-underline-offset: 10px;
+    text-decoration-color: #FF004D;
   }
 
   #section-two {
@@ -202,6 +174,7 @@
     }
 
     50% {
+      color: #FF004D;
       opacity: 1;
     }
 
@@ -252,15 +225,15 @@ transform: translate(-50%);
   background: transparent;
   pointer-events: none;
   z-index: 111;
-  border: 1px solid white;
+  border: 1px solid #FF004D;
   transition: all 0.2s ease-out;
   animation: moveCursor1 .5s infinite alternate;
 }
 
 .expand {
-  background: white;
+  background: #FF004D;
   animation: moveCursor2 .5s forwards;
-  border: 1px solid white;
+  border: 1px solid #FF004D;
 }
 
 @keyframes moveCursor1 {
@@ -286,5 +259,50 @@ transform: translate(-50%);
       transform: scale(1);
       opacity: 0;
   }
+}
+
+/* contacts*/
+
+.outside {
+  font-size: 10vw;
+  letter-spacing: -.01em;
+  line-height: 100%;
+  margin: 0;
+  width: 100%;
+  color: black;
+  background: linear-gradient(to right, black, black) no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 0%;
+  transition: background-size cubic-bezier(.1,.5,.5,1) 0.5s;
+  border-bottom: 1px solid #2F2B28;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+}
+
+.secondary {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #FF004D;
+  color: white;
+  clip-path: polygon(0 50%, 100% 50%, 100% 50%, 0 50%);
+  transform-origin: center;
+  transition: all cubic-bezier(.1,.5,.5,1) 0.4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.outside:hover > span {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+
+.inside {
+  text-decoration: none;
+  color: inherit;
 }
 
