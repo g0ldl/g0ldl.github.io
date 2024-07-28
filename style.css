@@ -263,19 +263,31 @@ transform: translate(-50%);
 
 /* contacts*/
 
+.touch {
+  color: black;
+}
+
+.primary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 200vh;
+}
+
 .outside {
-  font-size: 10vw;
+  font-size: 8vw;
   letter-spacing: -.01em;
   line-height: 100%;
   margin: 0;
   width: 100%;
-  color: black;
+  color: rgb(62, 62, 62);
   background: linear-gradient(to right, black, black) no-repeat;
   -webkit-background-clip: text;
   background-clip: text;
   background-size: 0%;
   transition: background-size cubic-bezier(.1,.5,.5,1) 0.5s;
-  border-bottom: 1px solid #2F2B28;
+  border-bottom: 1px solid #FF004D;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -302,6 +314,7 @@ transform: translate(-50%);
 }
 
 .inside {
+  font-size: 5rem;
   text-decoration: none;
   color: inherit;
 }
