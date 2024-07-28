@@ -124,18 +124,60 @@
       </div>
     -->
 
-    <!-- Loading animation from codepen -->
+
+    <!-- causing problems >:( -->
      
-    <div class="loader-wrapper">
-      <span class="loader"><span class="loader-inner"></span></span>
+    <div class="loader-wrapper" id="loader-wrapper">
+      <span class="loader" id="loader"><span class="loader-inner" id="loader-inner"></span></span>
     </div>
 
     <script>
-      $(window).on("load", function(){
-        $(".loader-wrapper").fadeOut("slow");
-      })
-    </script>
-  
+      $(window).load(function() {      //Do the code in the {}s when the window has loaded 
+    $("#loader-wrapper").fadeOut("fast");  //Fade out the #loader div
+    });
+    </script> 
+
+      <!--   
+
+    
+    <div class="loader">
+      Your Content For Load Screen
+    </div>
+
   </body>
 
+  <style>
+    .loader {
+        -webkit-animation: load-out 1s;
+        animation: load-out 1s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+    }
+    
+    @-webkit-keyframes load-out {
+        from {
+            top: 0;
+            opacity: 1;
+        }
+    
+        to {
+            top: 100%;
+            opacity: 0;
+        }
+    }
+    
+    @keyframes load-out {
+        from {
+            top: 0;
+            opacity: 1;
+        }
+    
+        to {
+            top: 100%;
+            opacity: 0;
+        }
+    }
+    </style>
+  -->
+    
 </html>
