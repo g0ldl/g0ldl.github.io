@@ -241,6 +241,9 @@
   top: 0;
   opacity: 1;
   transition: opacity 0.5s ease-out;
+  z-index: 9999;
+  transform-origin: top left;
+  transform: rotate(90deg) translateY(-100vh);
 }
 
 #progress-bar {
@@ -248,7 +251,7 @@
   height: 100vh;
   bottom: 0;
   position: absolute;
-  background-color: white;
+  background-color: black;
   mix-blend-mode: difference;
   transition: width 0.5s ease-in-out;
 }
