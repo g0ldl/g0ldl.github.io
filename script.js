@@ -31,35 +31,41 @@ textElements.forEach(text => {
   });
 });
 
-//projects carousel
-document.addEventListener("DOMContentLoaded", () => {
-	const marquee = document.querySelector(".marquee-inner");
-	const speed = 1; // Scrolling Speed
-	let scrollAmount = 0;
-	let isHovered = false;
+// LOADING SCREEN
 
-	// Duplicates the content
-	const marqueeContent = marquee.innerHTML;
-	marquee.innerHTML += marqueeContent;
+const progressBar = document.getElementById('progress-bar');
+const counter = document.getElementById('progress-counter');
+const loadingScreen = document.getElementById('loading-screen');
+const heroSection = document.querySelector('.hero');
 
-	const startScrolling = () => {
-		if (!isHovered) {
-			scrollAmount -= speed;
-			if (Math.abs(scrollAmount) >= marquee.scrollWidth / 2) {
-				scrollAmount = 0;
-			}
-			marquee.style.transform = `translateX(${scrollAmount}px)`;
-		}
-		requestAnimationFrame(startScrolling);
-	};
+function updateProgress(progress) {
+  progressBar.style.width = `${progress}%`;
+  counter.textContent = `${progress}%`;
+}
 
-	marquee.addEventListener("mouseover", () => {
-		isHovered = true;
-	});
+updateProgress(0);
+document.body.style.overflow = 'hidden';
 
-	marquee.addEventListener("mouseout", () => {
-		isHovered = false;
-	});
+document.addEventListener('DOMContentLoaded', () => {
+  let progress = 0;
+  const increment = 5;
 
-	startScrolling();
+  const updateLoop = setInterval(() => {
+    if (progress >= 100) {
+      clearInterval(updateLoop);
+      setTimeout(() => {
+        loadingScreen.style.opacity = '0';
+        loadingScreen.style.height = '0';
+        heroSection.style.opacity = '1';
+        setTimeout(() => {
+          window.addEventListener('wheel', handleScroll);
+          document.body.style.overflowY = 'scroll';
+        }, 700);
+      }, 0);
+    }
+    updateProgress(progress);
+    progress += increment;
+  }, 100);
 });
+
+

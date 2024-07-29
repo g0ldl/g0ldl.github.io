@@ -183,36 +183,83 @@
     }
   }
 
+/* projects carousel */
 
 
-.marquee {
-	overflow-x: clip;
-	white-space: nowrap;
-	position: relative;
-	width: 100%;
+.gallery-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 70vh;
 }
 
-.marquee-inner {
-	display: flex;
-	align-items: center;
-	gap: 2vw;
-	padding: 12vh 0;
-	will-change: transform;
+.item {
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  transition: flex 0.8s ease;
+  
+  &:hover{
+    flex: 7;
+  }
 }
 
-.marquee-inner img {
-	height: 100%;
-	transition: transform 0.5s;
-	flex-shrink: 0;
-	width: 20vw;
-	border-radius: 2rem;
+.item-1 { 
+  background-image: url('https://images.unsplash.com/photo-1499198116522-4a6235013d63?auto=format&fit=crop&w=1233&q=80');
 }
 
-.marquee-inner img:hover {
-	transform: scale(1.03);
+.item-2 { 
+  background-image: url('https://images.unsplash.com/photo-1492760864391-753aaae87234?auto=format&fit=crop&w=1336&q=80');
+}
+
+.item-3 { 
+  background-image: url('https://images.unsplash.com/photo-1503631285924-e1544dce8b28?auto=format&fit=crop&w=1234&q=80');
+}
+
+.item-4 { 
+  background-image: url('https://images.unsplash.com/photo-1510425463958-dcced28da480?auto=format&fit=crop&w=1352&q=80');
+}
+
+.item-5 { 
+  background-image: url('https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1234&q=80');
 }
 
 
+/* LOADING SCREEN */
+
+#loading-screen {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  position: absolute;
+  top: 0;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+}
+
+#progress-bar {
+  width: 0%;
+  height: 100vh;
+  bottom: 0;
+  position: absolute;
+  background-color: white;
+  mix-blend-mode: difference;
+  transition: width 0.5s ease-in-out;
+}
+
+#progress-counter {
+  color: white;
+  font-size: 23vw;
+  mix-blend-mode: difference;
+}
+
+/*
 #pj {
     color: white;
     font-size: 3rem;
@@ -228,7 +275,7 @@
 
 #pj:visited {
     color: grey;
-}
+} */
 
 h4 {
     color: yellow;
@@ -308,6 +355,7 @@ transform: translate(-50%);
 .outside {
   width: 100%;
   color: rgb(62, 62, 62);
+  font-size: 5rem;
   -webkit-background-clip: text;
   background-clip: text;
   background-size: 0%;
