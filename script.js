@@ -1,4 +1,4 @@
-// LOADING SCREEN
+// LOADING SCREEN (Thanks to @juxtopposed) <3
 
 const progressBar = document.getElementById('progress-bar');
 const counter = document.getElementById('progress-counter');

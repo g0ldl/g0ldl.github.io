@@ -35,10 +35,10 @@
   
   .horizontal-scrolling-items {
     display: flex;
-    font-size: 40px;
+    font-size: 30px;
     width: 2600px;
     animation-name: infiniteScroll;
-    animation-duration: 20s;
+    animation-duration: 17s;
     animation-iteration-count: infinite;
     animation-timing-function: linear;
     z-index: 98;
@@ -82,13 +82,13 @@
   }
 
   .welcome::after {
-    content:"WELCOME";
+    content:"Welcome";
     animation: changeText 3s 2s infinite; /* time between each words - time for first word to start*/
   }
   
   @keyframes changeText {
     0% {
-      content:"WELCOME"
+      content:"Welcome"
     }
     30% {
       content:"你好";
@@ -103,7 +103,7 @@
       content:"안녕하세요";
     }
     100% {
-      content:"Xin chào";
+      content:"Welcome";
     }
   }
 
@@ -259,6 +259,7 @@
 #progress-counter {
   color: white;
   font-size: 23vw;
+  font-family: termina, sans-serif;
   mix-blend-mode: difference;
 }
 
