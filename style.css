@@ -83,7 +83,7 @@
 
   .welcome::after {
     content:"Welcome";
-    animation: changeText 3s 2s infinite; /* time between each words - time for first word to start*/
+    animation: changeText 5.3s 2s infinite; /* time between each words - time for first word to start*/
   }
   
   @keyframes changeText {
@@ -183,8 +183,8 @@
     }
   }
 
-/* projects carousel */
 
+/* projects carousel */
 
 .gallery-wrap {
   display: flex;
@@ -206,29 +206,21 @@
   }
 }
 
-.item-1 { 
-  background-image: url('https://images.unsplash.com/photo-1499198116522-4a6235013d63?auto=format&fit=crop&w=1233&q=80');
-}
-
 .item-2 { 
-  background-image: url('https://images.unsplash.com/photo-1492760864391-753aaae87234?auto=format&fit=crop&w=1336&q=80');
+  background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnduMnJ5NTlhcmJ4MHY0YjBxbjM4b2FkZ2Q3ZXV1Y3lwZ2M3Y204byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/4rpsikLx1HWnK/giphy.gif');
 }
 
 .item-3 { 
-  background-image: url('https://images.unsplash.com/photo-1503631285924-e1544dce8b28?auto=format&fit=crop&w=1234&q=80');
+  background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHJxcjEzYXhsNnlzaWhjcDh1bXBkcXlrdW80Nnp4OGNmMm1xZW03biZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NTn8FQs5zIlXO/giphy.gif');
 }
 
 .item-4 { 
-  background-image: url('https://images.unsplash.com/photo-1510425463958-dcced28da480?auto=format&fit=crop&w=1352&q=80');
+  background-image: url('https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXhzOG5tbWlnYzg0YTM0NjEwMXI1djltODJ3bWt6Y3RoaHVqeGpvciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/FpmyVd5td9Vio/giphy.gif');
 }
 
-.item-5 { 
-  background-image: url('https://images.unsplash.com/photo-1503602642458-232111445657?auto=format&fit=crop&w=1234&q=80');
-}
 
 
 /* LOADING SCREEN */
-
 #loading-screen {
   width: 100vw;
   height: 100vh;
@@ -237,23 +229,24 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  position: absolute;
+  position: fixed;
   top: 0;
+  left: 0;
   opacity: 1;
   transition: opacity 0.5s ease-out;
   z-index: 9999;
-  transform-origin: top left;
-  transform: rotate(90deg) translateY(-100vh);
+  position: fixed;
 }
 
 #progress-bar {
   width: 0%;
   height: 100vh;
   bottom: 0;
-  position: absolute;
+  left: 0;
+  position: fixed;
   background-color: black;
-  mix-blend-mode: difference;
   transition: width 0.5s ease-in-out;
+  position: fixed;
 }
 
 #progress-counter {
@@ -261,6 +254,7 @@
   font-size: 23vw;
   font-family: termina, sans-serif;
   mix-blend-mode: difference;
+  position: fixed;
 }
 
 /*
@@ -280,10 +274,6 @@
 #pj:visited {
     color: grey;
 } */
-
-h4 {
-    color: yellow;
-}
 
 section:nth-of-type(odd) {
     background: black;
