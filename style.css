@@ -12,7 +12,7 @@
   
 
   main {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vh; 
@@ -229,13 +229,12 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-start;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   opacity: 1;
   transition: opacity 0.5s ease-out;
   z-index: 9999;
-  position: fixed;
 }
 
 #progress-bar {
@@ -243,10 +242,9 @@
   height: 100vh;
   bottom: 0;
   left: 0;
-  position: fixed;
+  position: absolute;
   background-color: black;
   transition: width 0.5s ease-in-out;
-  position: fixed;
 }
 
 #progress-counter {
@@ -254,7 +252,6 @@
   font-size: 23vw;
   font-family: termina, sans-serif;
   mix-blend-mode: difference;
-  position: fixed;
 }
 
 /*
