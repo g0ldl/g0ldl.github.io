@@ -50,7 +50,6 @@ document.addEventListener('click', e => {
 });
 
 //for contact page
-
 const textElements = gsap.utils.toArray('.text');
 
 textElements.forEach(text => {
