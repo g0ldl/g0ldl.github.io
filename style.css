@@ -47,8 +47,13 @@
     z-index: 98;
   }
 
+
+
   .horizontal-scrolling-items__item {
     white-space: nowrap;
+    color: #FF004D;
+    font-family: termina, sans-serif; 
+    font-weight: bold;
   }
 
   article {
@@ -84,6 +89,12 @@
     font-size: 9rem;
   }
 
+  @container sidebar (min-width: 700px) {
+    h1 {
+      font-size: 2em;
+    }
+  }
+
   .welcome::after {
     content:"Welcome";
     animation: changeText 5.3s 2s infinite; /* time between each words - time for first word to start*/
@@ -100,10 +111,10 @@
       content:"สวัสดี";
     }
     60% {
-      content:"こんにちは";
+      content:"你好";
     }
     80% {
-      content:"안녕하세요";
+      content:"Bonjour";
     }
     100% {
       content:"Welcome";
