@@ -20,29 +20,31 @@
     transform: rotate(-90deg) translateX(-100vh);
     overflow-x: hidden;
     overflow-y: scroll;
+    scroll-snap-type: y mandatory;
   }
 
   .logo {
     color: white;
     z-index: 9998;
     font-size: 4rem;
-    position: sticky;
+    position: absolute;
+    top: 0;
+    right: 0;
     margin: 2rem;
     mix-blend-mode: difference;
-  }
-
-  .scroller {
-    overflow-x: scroll;
-    scroll-snap-type: y mandatory;
-  }
-  
-  .scroller section {
-    scroll-snap-align: start;
   }
 
   @keyframes infiniteScroll {
     from {transform: translateX(0)}
     to {transform: translateX(-120%)}
+  }
+
+  .container {
+    width: 100%;
+    overflow-x: hidden;
+    z-index: 98;
+    position: aboslute;
+    right: 0;
   }
   
   .horizontal-scrolling-items {
@@ -55,8 +57,6 @@
     animation-timing-function: linear;
     z-index: 98;
   }
-
-
 
   .horizontal-scrolling-items__item {
     white-space: nowrap;
@@ -85,6 +85,8 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     font-family: termina, sans-serif;
+    color: white;
+    scroll-snap-align: start;
   }
 
   img.animated-gif{
@@ -134,7 +136,7 @@
     font-family: 'Poppins', sans-serif;
     font-size: 13rem;
     letter-spacing: 6px;
-    color: black;
+    color: white;
     font-weight: 900;
 
     text-decoration: underline 8px;
@@ -150,6 +152,7 @@
     margin-left: 5rem;
     margin-right: 5rem;
     margin-top: 2rem;
+    text-align: center;
   }
 
   .section-two {
@@ -157,11 +160,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 99;
   }
 
   .section-three {
     display: flex;
     flex-direction: column;
+    z-index: 100;
   }
 
   h3 {
@@ -197,7 +202,7 @@
 
 /* projects carousel */
 
-.container {
+.gallery {
   width: 100%;
   overflow-x: hidden;
   z-index: 99;
@@ -294,7 +299,7 @@ section:nth-of-type(odd) {
 }
 
 section:nth-of-type(even) {
-    background: white;
+    background: black;
 }
 
 /* custom cursor */
@@ -347,9 +352,9 @@ transform: translate(-50%);
 
 /* contacts*/
 
-.touch {
-  color: black;
-}
+/* .touch {
+  color: white;
+} */
 
 .primary {
   display: flex;
@@ -362,7 +367,7 @@ transform: translate(-50%);
 
 .outside {
   width: 100%;
-  color: rgb(62, 62, 62);
+  color: rgb(183, 179, 183);
   font-size: 5rem;
   -webkit-background-clip: text;
   background-clip: text;
@@ -395,7 +400,7 @@ transform: translate(-50%);
 }
 
 .inside {
-  font-size: 5rem;
+  font-size: 4.5rem;
   text-decoration: none;
   color: inherit;
 }
