@@ -97,7 +97,7 @@
 
   h1 {
     color: white;
-    font-size: 7rem;
+    font-size: 9rem;
   }
 
   @container sidebar (min-width: 700px) {
