@@ -1,13 +1,13 @@
 
-  * {
-    margin: 0;
-    scroll-behavior: smooth;
-    cursor: none;
-  }
+* {
+  margin: 0;
+  scroll-behavior: smooth;
+  cursor: none;
+}
 
-  ::-webkit-scrollbar {
-    display: none;
-  }
+::-webkit-scrollbar {
+  display: none;
+}
   
 
   main {
@@ -27,11 +27,19 @@
     color: white;
     z-index: 9998;
     font-size: 4rem;
+    font-weight: bold;
     position: absolute;
     top: 0;
     right: 0;
     margin: 2rem;
     mix-blend-mode: difference;
+    text-decoration: none;
+  }
+
+  @media (max-height: 900px){
+    .logo{
+      display: none;
+    }
   }
 
   @keyframes infiniteScroll {
@@ -97,7 +105,7 @@
 
   h1 {
     color: white;
-    font-size: 9rem;
+    font-size: 7rem;
   }
 
   @container sidebar (min-width: 700px) {
@@ -176,28 +184,28 @@
   }
 
   /*PROJECTS fading animation*/
-  .fading {
-    font: 900 10rem sans-serif;
-    color: white;
-    animation-name: fade-in;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
+.fading {
+  font: 900 10rem sans-serif;
+  color: white;
+  animation-name: fade-in;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fade-in {
+  0% {
+      opacity: 0.2;
   }
 
-  @keyframes fade-in {
-    0% {
-      opacity: 0.2;
-    }
-
-    50% {
+  50% {
       color: #FF004D;
       opacity: 1;
-    }
-
-    100% {
-      opacity: 0.2;
-    }
   }
+
+  100% {
+      opacity: 0.2;
+  }
+}
 
 
 /* projects carousel */
@@ -302,22 +310,30 @@ section:nth-of-type(even) {
     background: black;
 }
 
-/* custom cursor */
+/* custom cursor /*/
+@media (pointer: coarse)
+  {
+    .media {
+      display: none;
+    }
+  }
+
 .cursor {
   display: block;
   width: 20px;
   height: 20px;
   position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%);
+  top: 50%;
+  left: 50%;
   border-radius: 90%;
   pointer-events: none;
   z-index: 111;
-  border: 3px solid #FF004D;
+  border: 3px solid white;
+  background: white;
   transition: all 0.2s ease-out;
   animation: moveCursor1 .5s infinite alternate;
-}
+  mix-blend-mode: difference;
+  }
 
 .expand {
   background: #FF004D;
@@ -409,15 +425,6 @@ transform: translate(-50%);
   color:white;
 }
 
-  /* .plzworklol {
-    color: yellow;
-  }
-
-  @media screen and (min-width: 200px) { 
-    .plzworklol {
-      color: green;
-    }
-  } */
 
   
 
