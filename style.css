@@ -97,7 +97,7 @@
 
   h1 {
     color: white;
-    font-size: 7rem;
+    font-size: 9rem;
   }
 
   @container sidebar (min-width: 700px) {
@@ -302,30 +302,22 @@ section:nth-of-type(even) {
     background: black;
 }
 
-/* custom cursor /*/
-@media (pointer: coarse)
-  {
-    .media {
-      display: none;
-    }
-  }
-
+/* custom cursor */
 .cursor {
   display: block;
   width: 20px;
   height: 20px;
   position: absolute;
-  top: 50%;
-  left: 50%;
+top: 50%;
+left: 50%;
+transform: translate(-50%);
   border-radius: 90%;
   pointer-events: none;
   z-index: 111;
-  border: 3px solid white;
-  background: white;
+  border: 3px solid #FF004D;
   transition: all 0.2s ease-out;
   animation: moveCursor1 .5s infinite alternate;
-  mix-blend-mode: difference;
-  }
+}
 
 .expand {
   background: #FF004D;
