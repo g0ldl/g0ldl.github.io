@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
 
 * {
   margin: 0;
@@ -23,55 +24,16 @@
     scroll-snap-type: y mandatory;
   }
 
-  .logo {
-    color: white;
-    z-index: 9998;
-    font-size: 4rem;
-    font-weight: bold;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 2rem;
-    mix-blend-mode: difference;
-    text-decoration: none;
-  }
-
-  @media (max-height: 900px){
+  /* @media (max-height: 900px){
     .logo{
       display: none;
     }
-  }
-
+  } */
+/* 
   @keyframes infiniteScroll {
     from {transform: translateX(0)}
     to {transform: translateX(-120%)}
-  }
-
-  .container {
-    width: 100%;
-    overflow-x: hidden;
-    z-index: 98;
-    position: aboslute;
-    right: 0;
-  }
-  
-  .horizontal-scrolling-items {
-    display: flex;
-    font-size: 30px;
-    width: 300px;
-    animation-name: infiniteScroll;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    z-index: 98;
-  }
-
-  .horizontal-scrolling-items__item {
-    white-space: nowrap;
-    color: #FF004D;
-    font-family: termina, sans-serif; 
-    font-weight: bold;
-  }
+  } */
 
   article {
     display: flex;
@@ -106,38 +68,6 @@
   h1 {
     color: white;
     font-size: 7rem;
-  }
-
-  @container sidebar (min-width: 700px) {
-    h1 {
-      font-size: 2em;
-    }
-  }
-
-  .welcome::after {
-    content:"Welcome";
-    animation: changeText 5.3s 2s infinite; /* time between each words - time for first word to start*/
-  }
-  
-  @keyframes changeText {
-    0% {
-      content:"Welcome"
-    }
-    30% {
-      content:"你好";
-    }
-    40% {
-      content:"สวัสดี";
-    }
-    60% {
-      content:"你好";
-    }
-    80% {
-      content:"Bonjour";
-    }
-    100% {
-      content:"Welcome";
-    }
   }
 
   #about {
@@ -207,7 +137,6 @@
   }
 }
 
-
 /* projects carousel */
 
 .gallery {
@@ -221,6 +150,14 @@
   flex-direction: row;
   width: 100%;
   height: 70vh;
+}
+
+.itemside{
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
 }
 
 .item {
@@ -254,7 +191,10 @@
 #loading-screen {
   width: 100vw;
   height: 100vh;
-  background-color: white;
+  background:
+    linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+    linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+    var(--dot-color);
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -263,44 +203,38 @@
   top: 0;
   left: 0;
   opacity: 1;
-  transition: opacity 0.5s ease-out;
   z-index: 9999;
 }
 
 #progress-bar {
   width: 0%;
   height: 100vh;
-  bottom: 0;
-  left: 0;
   position: absolute;
   background-color: black;
-  transition: width 0.5s ease-in-out;
+  transition: width 0.3s ease-in-out;
 }
 
 #progress-counter {
-  color: white;
+  color: #FAF7EE;
   font-size: 23vw;
-  font-family: termina, sans-serif;
+  font-family: "Climate Crisis", serif;
   mix-blend-mode: difference;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  background: none;
 }
 
-/*
-#pj {
-    color: white;
-    font-size: 3rem;
-    letter-spacing: 5px;
-    line-height: 1.6;
-
+/* Variables for the dotted background */
+body {
+  --dot-bg: #FAF7EE;
+  --dot-color: grey;
+  --dot-size: 1px;
+  --dot-space: 22px;
 }
 
-#pj:hover {
-    color: #2D2D2D;
-    transform: translate3d(0, -10px, 22px);
-}
-
-#pj:visited {
-    color: grey;
-} */
 
 section:nth-of-type(odd) {
     background: black;
@@ -425,10 +359,30 @@ section:nth-of-type(even) {
   color:white;
 }
 
+#container {
+  position: absolute;
+  margin: auto;
+  width: 100vw;
+  height: 80pt;
+  top: 0;
+  bottom: 0;
 
-  
+  filter: url(#threshold) blur(0.6px);
+  font-family: "Climate Crisis", serif;
+}
 
-  
+#morph1,
+#morph2 {
+  position: absolute;
+  width: 100%;
+  display: inline-block;
 
- 
+  font-family: "Raleway", sans-serif;
+  font-size: 80pt;
+
+  text-align: center;
+
+  user-select: none;
+}
+
 
