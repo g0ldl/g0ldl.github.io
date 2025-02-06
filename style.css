@@ -20,7 +20,6 @@ main {
   transform: rotate(-90deg) translateX(-100vh);
   overflow-x: hidden;
   overflow-y: scroll;
-  scroll-snap-type: y mandatory;
 }
 
 
@@ -46,6 +45,17 @@ section {
   font-family: termina, sans-serif;
   color: white;
   scroll-snap-align: start;
+}
+
+.logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Climate Crisis', sans-serif;
+  color: white;
+  z-index: 1000; /* Ensures it's above other elements */
 }
 
 img.animated-gif{
