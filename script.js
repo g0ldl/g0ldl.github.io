@@ -22,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
       setTimeout(() => {
         loadingScreen.style.opacity = '0';
         loadingScreen.style.height = '0';
-        heroSection.style.opacity = '1';
         setTimeout(() => {
           window.addEventListener('wheel', handleScroll);
           document.body.style.overflowY = 'scroll';
@@ -64,7 +63,7 @@ textElements.forEach(text => {
   });
 });
 
-//Welcome morph
+//Welcome text animation inspired by @dotonion
 const elts = {
   text1: document.getElementById("morph1"),
   text2: document.getElementById("morph2")
